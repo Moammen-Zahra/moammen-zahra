@@ -1461,3 +1461,425 @@ body.entrance-finished > *:not(#entrance) {
     font-size: 12px;
   }
 }
+/* ============================================
+   FINAL MOBILE OPTIMIZATION
+   Desktop remains unchanged
+============================================ */
+
+@media (max-width: 700px) {
+
+  /* ---------- Global mobile spacing ---------- */
+
+  .hero,
+  .section {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* ---------- Hero ---------- */
+
+  .hero {
+    min-height: 100svh;
+    padding-top: calc(var(--nav-h) + 1.5rem);
+    padding-bottom: 4.5rem;
+    justify-content: center;
+  }
+
+  .hero-inner {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    justify-items: center;
+  }
+
+  .hero-content {
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ---------- Status ---------- */
+
+  .hero-status {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.15rem;
+    font-size: 0.68rem;
+    padding: 0.35rem 0.75rem;
+  }
+
+  /* ---------- Name ---------- */
+
+  .hero-title {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: clamp(2.9rem, 14vw, 4.2rem);
+    line-height: 0.95;
+  }
+
+  #animated-name {
+    width: 100%;
+    height: auto;
+    min-height: 1.9em;
+    text-align: center;
+  }
+
+  #animated-name .name-line {
+    width: max-content;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 1em;
+    line-height: 1;
+  }
+
+  /* ---------- Role ---------- */
+
+  .hero-role {
+    width: 100%;
+    max-width: 420px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  /* ---------- Description ---------- */
+
+  .hero-desc {
+    width: 100%;
+    max-width: 430px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: center !important;
+  }
+
+  /* ---------- Buttons ---------- */
+
+  .hero-ctas {
+    width: 100%;
+    max-width: 420px;
+    justify-content: center;
+    gap: 0.65rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-ctas .btn {
+    flex: 1;
+    min-height: 44px;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* ---------- Meta ---------- */
+
+  .hero-meta {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    font-size: 0.64rem;
+    text-align: center;
+  }
+
+  .hero-meta-sep {
+    width: 18px;
+  }
+
+  /* ---------- Hero image ---------- */
+
+  .hero-visual {
+    width: 100%;
+    min-width: 0;
+    max-width: 420px;
+    height: min(55svh, 480px);
+    min-height: 280px;
+    margin: 0 auto;
+  }
+
+  .hero-photo-wrap {
+    width: 100%;
+    height: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    overflow: visible;
+  }
+
+  .hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    transform: scale(1.08);
+    transform-origin: center bottom;
+  }
+
+  /* Disable desktop hover movement on touch */
+  .hero-photo-wrap:hover {
+    transform: none;
+  }
+
+  .hero-photo-wrap:hover .hero-photo {
+    transform: scale(1.08);
+  }
+
+  /* ---------- Scroll indicator ---------- */
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  /* ---------- Sections ---------- */
+
+  .section {
+    margin: 80px auto;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .section-header {
+    gap: 0.8rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+
+  /* ---------- About ---------- */
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-lead {
+    font-size: 1.15rem;
+  }
+
+  .about-text p:not(.about-lead) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-side {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  /* ---------- Skills ---------- */
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* ---------- Projects ---------- */
+
+  .building-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .projects-note {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ---------- Certificates ---------- */
+
+  .cert-item {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 1.5rem 0;
+  }
+
+  .cert-side {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  /* ---------- Contact ---------- */
+
+  .contact-headline,
+  .contact-sub {
+    text-align: center;
+  }
+
+  .contact-links {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  /* ---------- Footer ---------- */
+
+  .footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .footer-inner {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-brand {
+    align-items: center;
+  }
+
+  .footer-nav,
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+  }
+
+
+  /* ==========================================
+     MOBILE ENTRANCE
+  ========================================== */
+
+  .entrance {
+    width: 100%;
+    height: 100svh;
+  }
+
+  .entrance-content {
+    width: 100%;
+    height: 100%;
+  }
+
+  .entrance-person {
+    left: 50%;
+    bottom: 0;
+    width: min(92vw, 420px);
+    height: min(70svh, 600px);
+  }
+
+  .entrance-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+  }
+
+  .entrance-message {
+    top: 15%;
+    left: 50%;
+    width: max-content;
+    max-width: 210px;
+    padding: 11px 14px;
+    font-size: 12px;
+    line-height: 1.45;
+    transform: translateX(-50%) translateY(15px) scale(.96);
+  }
+
+  /* Keep message animation centered */
+  @keyframes entranceMessage {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(15px) scale(.96);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0) scale(1);
+    }
+  }
+}
+
+
+/* ============================================
+   SMALL PHONES
+============================================ */
+
+@media (max-width: 430px) {
+
+  .hero {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+    padding-top: calc(var(--nav-h) + 1rem);
+  }
+
+  .hero-inner {
+    max-width: 380px;
+    gap: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.7rem, 14vw, 3.6rem);
+  }
+
+  .hero-role {
+    font-size: 0.94rem;
+  }
+
+  .hero-desc {
+    font-size: 0.86rem;
+    max-width: 360px;
+  }
+
+  .hero-ctas {
+    max-width: 360px;
+  }
+
+  .hero-ctas .btn {
+    font-size: 0.86rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+
+  .hero-visual {
+    max-width: 360px;
+    height: min(50svh, 420px);
+    min-height: 260px;
+  }
+
+  .hero-photo-wrap {
+    max-width: 320px;
+  }
+
+  .hero-photo {
+    transform: scale(1.05);
+  }
+
+  .hero-photo-wrap:hover .hero-photo {
+    transform: scale(1.05);
+  }
+
+  /* Entrance */
+
+  .entrance-person {
+    width: 100vw;
+    height: 66svh;
+  }
+
+  .entrance-message {
+    top: 13%;
+    max-width: 190px;
+    font-size: 11.5px;
+    padding: 10px 12px;
+  }
+}
