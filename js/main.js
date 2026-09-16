@@ -189,21 +189,22 @@ loadFonts();
 document.addEventListener("DOMContentLoaded", () => {
   const name = document.getElementById("animated-name");
 
-const fonts = [
-  '"OCR A Std"',
-  '"Apple Chancery"',
-  'Arial, sans-serif',
-  '"Chalkduster"',
-  'Georgia, serif'
-];
+  if (!name) return;
+
+  const fonts = [
+    '"OCR A Std"',
+    '"Apple Chancery"',
+    '"Chalkduster"',
+    'Arial, sans-serif',
+    'Georgia, serif'
+  ];
 
   const words = ["Moamen", "Zahra"];
   const typingSpeed = 100;
   const pause = 700;
 
-  async function wait(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
+  const wait = (ms) =>
+    new Promise(resolve => setTimeout(resolve, ms));
 
   async function typeName(font) {
     name.style.fontFamily = font;
@@ -232,7 +233,6 @@ const fonts = [
   async function startAnimation() {
     for (let i = 0; i < fonts.length; i++) {
       await typeName(fonts[i]);
-
       await wait(pause);
 
       if (i < fonts.length - 1) {
@@ -242,5 +242,15 @@ const fonts = [
     }
   }
 
+  /*
+    WAIT FOR ENTRANCE TO FINISH
+    Entrance:
+    4300ms = starts fading
+    1800ms = fade duration
+  */
+  setTimeout(() => {
+    startAnimation();
+  }, 6100);
+});
   startAnimation();
 });
