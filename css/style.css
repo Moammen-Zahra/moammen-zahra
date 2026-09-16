@@ -611,7 +611,7 @@ body.entrance-finished > *:not(#entrance) {
   max-width: 420px;
   margin-left: auto;
 }
-.hero-photo-wrap { position: relative; width: 100%; height: 100%; overflow: visible; flex-shrink: 0; } .hero-photo { width: 100%; height: 100%; object-fit: contain; object-position: center bottom; transform: scale(1.25); transform-origin: center bottom; filter: saturate(0.92); transition: transform 0.8s var(--ease), filter 0.8s var(--ease); display: block; } .hero-photo-wrap:hover .hero-photo { transform: scale(1.28); filter: saturate(1); } .hero-photo-frame { position: absolute; inset: 0; border-radius: var(--radius); border-bottom: 3px solid var(--line); pointer-events: none; } /* PNG has transparency — remove the overlay */ .hero-photo-wrap::after { display: none; } [data-theme="light"] .hero-photo-wrap::after { display: none; }
+.hero-photo-wrap { position: relative; width: 100%; height: 100%; overflow: visible; flex-shrink: 0; } .hero-photo { width: 100%; height: 100%; object-fit: contain; object-position: center bottom; transform: scale(1.25); transform-origin: center bottom; filter: saturate(0.92); transition: transform 0.8s var(--ease), filter 0.8s var(--ease); display: block; } .hero-photo-wrap:hover .hero-photo { transform: scale(1.28); filter: saturate(1); } .hero-photo-frame { position: absolute; inset: 0; border-radius: var(--radius); border-bottom: 3px solid var(--line); pointer-events: none; } /* webp has transparency — remove the overlay */ .hero-photo-wrap::after { display: none; } [data-theme="light"] .hero-photo-wrap::after { display: none; }
 /* Scroll indicator */
 .scroll-indicator {
   position: absolute;
@@ -1197,7 +1197,7 @@ body.entrance-finished > *:not(#entrance) {
   flex-shrink: 0;
 }
 
-/* PNG itself */
+/* webp itself */
 .hero-photo-wrap {
   position: relative;
   width: 100%;
@@ -1205,7 +1205,7 @@ body.entrance-finished > *:not(#entrance) {
   overflow: visible;
 }
 
-/* Transparent PNG — can become visually bigger without
+/* Transparent webp — can become visually bigger without
    changing the size of the column */
 .hero-photo {
   display: block;
@@ -1222,4 +1222,4 @@ body.entrance-finished > *:not(#entrance) {
               filter 0.8s var(--ease);
 }
 
-.hero-photo-wrap { position: relative; transition: transform 0.8s var(--ease); } /* Move the whole image + frame together */ .hero-photo-wrap:hover { transform: translateY(50px); } /* Make only the PNG bigger */ .hero-photo-wrap:hover .hero-photo { transform: scale(1.24); filter: saturate(1); } /* Keep the frame at its normal size */ .hero-photo-frame { position: absolute; inset: 0; border-radius: var(--radius); border-bottom: 3px solid var(--line); pointer-events: none; } /* No overlay */ .hero-photo-wrap::after { display: none; } [data-theme="light"] .hero-photo-wrap::after { display: none; }
+.hero-photo-wrap { position: relative; transition: transform 0.8s var(--ease); } /* Move the whole image + frame together */ .hero-photo-wrap:hover { transform: translateY(50px); } /* Make only the webp bigger */ .hero-photo-wrap:hover .hero-photo { transform: scale(1.24); filter: saturate(1); } /* Keep the frame at its normal size */ .hero-photo-frame { position: absolute; inset: 0; border-radius: var(--radius); border-bottom: 3px solid var(--line); pointer-events: none; } /* No overlay */ .hero-photo-wrap::after { display: none; } [data-theme="light"] .hero-photo-wrap::after { display: none; }
