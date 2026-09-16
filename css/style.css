@@ -1322,8 +1322,8 @@ body.entrance-finished > *:not(#entrance) {
   .entrance-message {
     position: absolute;
 
-    top: 17%;
-    left: 58%;
+    top: 12%;
+    left: 70%;
 
     width: max-content;
     max-width: min(230px, 70vw);
@@ -2016,26 +2016,5 @@ body.entrance-finished > *:not(#entrance) {
   *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
-  }
-}
-/* =========================================================
-   MOBILE ENTRANCE MESSAGE — FIXED POSITION
-   ========================================================= */
-
-/* MOBILE ENTRANCE MESSAGE POSITION */
-
-@media (max-width: 700px) {
-  .entrance-message {
-    top: 14%;
-    left: 70%;
-
-    transform: translateX(-50%) translateY(12px) scale(.96);
-  }
-}
-
-@media (max-width: 430px) {
-  .entrance-message {
-    top: 13%;
-    left: 70%;
   }
 }
