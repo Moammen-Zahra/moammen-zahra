@@ -649,7 +649,179 @@ body.entrance-finished > *:not(#entrance) {
   text-transform: uppercase;
   letter-spacing: 0.18em;
 }
+/* =========================
+   MOBILE HERO OPTIMIZATION
+   Desktop remains unchanged
+========================= */
 
+@media (max-width: 700px) {
+
+  .hero {
+    min-height: 100svh;
+    padding:
+      calc(var(--nav-h) + 2rem)
+      1.25rem
+      5rem;
+    justify-content: center;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    width: 100%;
+  }
+
+  .hero-content {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero-status {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 16vw, 4.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    margin-bottom: 1rem;
+  }
+
+  .hero-title-line {
+    display: block;
+    min-height: 1.9em;
+  }
+
+  .hero-role {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+
+  .hero-desc {
+    max-width: 100%;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-ctas {
+    gap: 0.7rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-ctas .btn {
+    min-height: 44px;
+  }
+
+  .hero-meta {
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    font-size: 0.68rem;
+  }
+
+  .hero-meta-sep {
+    width: 20px;
+  }
+
+  /* Mobile image */
+  .hero-visual {
+    width: 100%;
+    height: min(58vh, 520px);
+    min-height: 320px;
+  }
+
+  .hero-photo-wrap {
+    width: 100%;
+    height: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .hero-photo {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.15);
+    transform-origin: center bottom;
+  }
+
+  .hero-photo-wrap:hover {
+    transform: none;
+  }
+
+  .hero-photo-wrap:hover .hero-photo {
+    transform: scale(1.15);
+  }
+
+  .hero-photo-frame {
+    inset: 0;
+  }
+
+  /* Scroll indicator */
+  .scroll-indicator {
+    bottom: 1.25rem;
+    left: 1.25rem;
+  }
+
+  .scroll-indicator-line {
+    width: 36px;
+  }
+
+  .scroll-indicator-text {
+    font-size: 0.65rem;
+  }
+}
+
+
+/* Smaller phones */
+@media (max-width: 430px) {
+
+  .hero {
+    padding:
+      calc(var(--nav-h) + 1.5rem)
+      1rem
+      4.5rem;
+  }
+
+  .hero-inner {
+    gap: 1.75rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.7rem, 15vw, 3.8rem);
+  }
+
+  .hero-status {
+    font-size: 0.64rem;
+  }
+
+  .hero-desc {
+    font-size: 0.88rem;
+  }
+
+  .hero-visual {
+    height: min(52vh, 430px);
+    min-height: 280px;
+  }
+
+  .hero-photo-wrap {
+    max-width: 320px;
+  }
+
+  .hero-photo {
+    transform: scale(1.1);
+  }
+
+  .hero-photo-wrap:hover .hero-photo {
+    transform: scale(1.1);
+  }
+
+  .hero-meta {
+    font-size: 0.62rem;
+  }
+}
 /* ---------- Sections ---------- */
 .section {
   max-width: var(--container);
