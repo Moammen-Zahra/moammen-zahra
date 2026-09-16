@@ -197,7 +197,7 @@ html {
 
 body.entrance-active > *:not(#entrance) {
   filter: blur(25px);
-  transform: scale(1.025);
+  transform: scale(1);
   opacity: 0.75;
 
   transition:
@@ -1554,7 +1554,7 @@ body.entrance-finished > *:not(#entrance) {
     object-fit: contain;
     object-position: center bottom;
 
-    transform: scale(1.02);
+    transform: scale(1.0);
     transform-origin: center bottom;
   }
 
@@ -1563,7 +1563,7 @@ body.entrance-finished > *:not(#entrance) {
   }
 
   .hero-photo-wrap:hover .hero-photo {
-    transform: scale(1.02);
+    transform: scale(1.0);
   }
 
   /* No desktop-style scroll indicator on mobile */
