@@ -2022,37 +2022,20 @@ body.entrance-finished > *:not(#entrance) {
    MOBILE ENTRANCE MESSAGE — FIXED POSITION
    ========================================================= */
 
+/* MOBILE ENTRANCE MESSAGE POSITION */
+
 @media (max-width: 700px) {
   .entrance-message {
-    position: fixed;
-
-    top: 12%;
-    left: 50%;
-
-    width: max-content;
-    max-width: 210px;
+    top: 14%;
+    left: 70%;
 
     transform: translateX(-50%) translateY(12px) scale(.96);
-
-    z-index: 10;
-  }
-
-  @keyframes entranceMessage {
-    0% {
-      opacity: 0;
-      transform: translateX(-50%) translateY(12px) scale(.96);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0) scale(1);
-    }
   }
 }
 
 @media (max-width: 430px) {
   .entrance-message {
-    top: 10%;
-    left: 50%;
+    top: 13%;
+    left: 70%;
   }
 }
