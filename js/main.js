@@ -188,9 +188,8 @@ loadFonts();
 
 document.addEventListener("DOMContentLoaded", () => {
   const name = document.getElementById("animated-name");
-  const entrance = document.getElementById("entrance");
 
-  if (!name || !entrance) return;
+  if (!name) return;
 
   const fonts = [
     '"OCR A Std"',
@@ -243,10 +242,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  /* WAIT UNTIL ENTRANCE FADE IS COMPLETELY FINISHED */
-  entrance.addEventListener("transitionend", (event) => {
-    if (event.propertyName === "opacity") {
-      startAnimation();
-    }
-  });
+  /*
+    WAIT FOR ENTRANCE TO FINISH
+    Entrance:
+    4300ms = starts fading
+    1800ms = fade duration
+  */
+  setTimeout(() => {
+    startAnimation();
+  }, 4500);
 });
