@@ -1322,8 +1322,8 @@ body.entrance-finished > *:not(#entrance) {
   .entrance-message {
     position: absolute;
 
-    top: 12%;
-    left: 70%;
+    top: 14%;
+    left: 88%;
 
     width: max-content;
     max-width: min(230px, 70vw);
@@ -1942,8 +1942,8 @@ body.entrance-finished > *:not(#entrance) {
   }
 
   .entrance-message {
-    top: 11%;
-
+    top: 12%;
+    left: 88%;
     max-width: 190px;
 
     padding: 10px 12px;
